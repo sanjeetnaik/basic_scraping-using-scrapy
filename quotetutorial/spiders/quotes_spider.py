@@ -63,5 +63,5 @@ class QuotesSpider(scrapy.Spider):
 
 		next_page = "https://quotes.toscrape.com/page/" + str(QuotesSpider.page_number) + "/"
 		if QuotesSpider.page_number <= 11:
-			QuotesSpider.page_number += 1
+			QuotesSpider.page_number += 5
 			yield response.follow(next_page, callback=self.parse)
